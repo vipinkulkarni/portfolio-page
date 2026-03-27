@@ -100,7 +100,8 @@ export const projects: Project[] = [
     name: "Developer Portfolio",
     description: "A modern, responsive portfolio website built to showcase my skills, experience, and projects.",
     tools: ["React", "TypeScript", "Vite", "Framer Motion"],
-    githubUrl: "https://github.com/vipinkulkarni",
+    githubUrl: "https://github.com/vipinkulkarni/portfolio-page",
+    "liveUrl": "https://portfolio-page-vipin-kulkarni.vercel.app/",
     bullets: [
       "Built a single-page portfolio with React, TypeScript, and Vite for fast development and optimized builds.",
       "Implemented smooth scroll navigation and animated section reveals using Framer Motion.",
