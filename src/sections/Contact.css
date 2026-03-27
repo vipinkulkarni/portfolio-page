@@ -1,3 +1,7 @@
+#contact {
+  min-height: calc(100vh - var(--nav-height, 70px));
+}
+
 .contact__content {
   display: flex;
   justify-content: center;
