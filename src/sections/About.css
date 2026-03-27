@@ -1,0 +1,71 @@
+/* Layout: text on top, cards below in a 2x2 grid */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Two short paragraphs about who Vipin is */
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.about__text p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about__text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* 2x2 card grid for highlight traits */
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.about__card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.about__card-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.about__card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.about__card-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about__cards {
+    grid-template-columns: 1fr;
+  }
+}

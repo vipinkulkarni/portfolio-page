@@ -1,0 +1,136 @@
+.exp__timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-left: 32px;
+}
+
+.exp__timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+}
+
+.exp__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp__card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 30px var(--accent-glow);
+}
+
+.exp__dot {
+  position: absolute;
+  left: -39px;
+  top: 34px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent);
+}
+
+.exp__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.exp__role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.exp__company {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.exp__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.exp__duration {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.exp__location {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.exp__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.exp__bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp__bullets li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp__bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .exp__timeline {
+    padding-left: 24px;
+  }
+
+  .exp__card {
+    padding: 22px 20px;
+  }
+
+  .exp__dot {
+    left: -31px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .exp__header {
+    flex-direction: column;
+  }
+
+  .exp__meta {
+    align-items: flex-start;
+  }
+}
